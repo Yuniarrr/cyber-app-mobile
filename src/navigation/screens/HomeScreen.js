@@ -1,18 +1,18 @@
-import * as React from "react";
-import { View, Text } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import Background from "../../components/Background";
+import React from 'react';
+import { Text, View } from 'react-native';
+//import Background from '../../components/Background';
+import ColoredHeader from '../../components/ColoredHeader';
 
 export default function HomeScreen({ navigation }) {
   return (
-    <Background>
-      <Text
-        className="text-[#000] italic"
-        onPress={() => alert('This is the "Home" screen.')}
-      >
-        Home Screen
-      </Text>
-      <StatusBar style="auto" />
-    </Background>
+    // <View>
+    <ColoredHeader>
+      <View className=" justify-center pt-12 pl-6">
+         <Text className="text-white text-left font-inter text-lg font-semibold">Hello, Keisya</Text>
+         <Text className="text-white text-left font-inter text-xs font-light">Upgrade your skill for better futures!</Text>
+      </View>
+    </ColoredHeader>
+    // </View>
   );
 }
+

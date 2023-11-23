@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Background({ children }) {
   return (
-    <View className="flex-1 items-center justify-center bg-[#F2E5E5]">
+    <View className="flex-1 items-center justify-center bg-[#FFFFFF]">
       {children}
     </View>
   );

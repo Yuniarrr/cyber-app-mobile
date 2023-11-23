@@ -1,21 +1,26 @@
 import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer} from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import Ionicons from "react-native-vector-icons/Ionicons"; 
+
 
 // Screens
 import HomeScreen from "./screens/HomeScreen";
-import Chat from "./screens/Chat";
-import History from "./screens/History";
+import Course from "./screens/Course";
 import Profile from "./screens/Profile";
+import Wishlist from "./screens/Wishlist";
+
 
 // Screen names
 const homeName = "Home";
-const chatFitur = "Chat";
-const historyFitur = "History";
+const courseFitur = "Course";
+const wishlistFitur = "Wishlist";
 const profileFitur = "Profile";
 
+
 const Tab = createBottomTabNavigator();
+
+
 
 function MainContainer() {
   return (
@@ -29,10 +34,10 @@ function MainContainer() {
 
             if (rn === homeName) {
               iconName = focused ? "home" : "home-outline";
-            } else if (rn === chatFitur) {
-              iconName = focused ? "chatbubble" : "chatbubble-outline";
-            } else if (rn === historyFitur) {
-              iconName = focused ? "time" : "time-outline";
+            } else if (rn === courseFitur) {
+              iconName = focused ? "ios-globe" : "ios-globe-outline";
+            } else if (rn === wishlistFitur) {
+              iconName = focused ? "heart" : "heart-outline";
             } else if (rn === profileFitur) {
               iconName = focused ? "person" : "person-outline";
             }
@@ -41,22 +46,25 @@ function MainContainer() {
               <Ionicons
                 name={iconName}
                 size={size}
-                color={focused ? "#BA7E80" : "grey"}
+                color={focused ? "#1E2857" : "grey"}
               />
             );
           },
-          tabBarActiveTintColor: "#BA7E80",
+          tabBarActiveTintColor: "#1E2857",
           tabBarInactiveTintColor: "grey",
+          tabBarLabelStyle: {
+            color: "#1E2857", // Set the text color for the tab label
+          },
           headerShown: false,
           tabBarStyle: {
-            height: 50,
+            height: 60,
             paddingBottom: 5,
           },
         })}
       >
         <Tab.Screen name={homeName} component={HomeScreen} />
-        <Tab.Screen name={chatFitur} component={Chat} />
-        <Tab.Screen name={historyFitur} component={History} />
+        <Tab.Screen name={courseFitur} component={Course} />
+        <Tab.Screen name={wishlistFitur} component={Wishlist} />
         <Tab.Screen name={profileFitur} component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
