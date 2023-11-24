@@ -3,7 +3,11 @@
 module.exports = {
   content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      gradientColorStops: theme => ({
+        ...theme('colors'),
+      }),
+    },
     colors: {
       white: "#FFFFFF",
       darkblue: "#1E2857",
@@ -16,5 +20,7 @@ module.exports = {
       "light-gray": "#F3F4F6",
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-gradients'),
+  ],
 };
