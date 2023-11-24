@@ -30,9 +30,9 @@ function MainContainer() {
           if (rn === homeName) {
             iconName = focused ? "home" : "home-outline";
           } else if (rn === courseFitur) {
-            iconName = focused ? "ios-globe" : "ios-globe-outline";
+            iconName = focused ? "book" : "book-outline";
           } else if (rn === wishlistFitur) {
-            iconName = focused ? "heart" : "heart-outline";
+            iconName = focused ? "md-folder-open" : "md-folder-open-outline";
           } else if (rn === profileFitur) {
             iconName = focused ? "person" : "person-outline";
           }
