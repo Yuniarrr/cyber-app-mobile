@@ -16,7 +16,7 @@ export default function Course() {
 
   return (
     <Background>
-      <ScrollView className="flex flex-col mx-2 gap-y-6" showsVerticalScrollIndicator={false}>
+      <ScrollView className="flex flex-col m-5 gap-y-6" showsVerticalScrollIndicator={false}>
         <Text className="w-full -mb-3 text-lg font-semibold text-center text-darkblue">Courses</Text>
 
         {/* course list */}
