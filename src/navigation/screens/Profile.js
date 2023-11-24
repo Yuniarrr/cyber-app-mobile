@@ -6,13 +6,9 @@ import Background from "../../components/Background";
 export default function Profile({ navigation }) {
   return (
     <Background>
-      <Text
-        className="text font-bold"
-        onPress={() => navigation.navigate("Profile")}
-      >
-        Profile
-      </Text>
-      <StatusBar style="auto" />
+      <View className="flex flex-col items-start justify-start">
+        <Text className="w-full text-center">Profile</Text>
+      </View>
     </Background>
   );
 }
