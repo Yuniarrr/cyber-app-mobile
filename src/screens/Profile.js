@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import Background from "../components/Background";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import GreenFlagSVG from '../../assets/green-flag.svg';
@@ -9,6 +9,22 @@ import RecentSVG from '../../assets/recent.svg';
 import GraphSVG from '../../assets/graph.svg';
 import CountWithIconBox from "../components/Box/CountWithIconBox";
 import InfoWithIconBox from "../components/Box/InfoWithIconBox";
+import CourseProgressCard from "../components/Card/CourseProgressCard";
+
+const data = [
+  {
+    id: 1,
+    category: "Networking",
+    title: "Network Components, Types, and Connections",
+    progress: 75,
+  },
+  {
+    id: 2,
+    category: "Cyber Security",
+    title: "Attacks, Concepts and Techniques",
+    progress: 60,
+  },
+]
 
 export default function Profile({ navigation }) {
   return (
@@ -67,15 +83,24 @@ export default function Profile({ navigation }) {
         </View>
 
         {/* list course */}
-        <View className="flex flex-col w-full">
-          <View className="flex flex-col px-3 py-2 border-2 border-light-gray rounded-lg gap-y-1">
-            <Text className="px-1 text-xs font-semibold text-center bg-light-green text-green rounded-md w-1/3">Networking</Text>
-            <Text className="text-base font-semibold">Network Components, Types, and Connections</Text>
-            <Text className="text-xs text-gray-chateau text-right mb-2">75% completed</Text>
-            <View className="w-full bg-light-gray rounded-full h-2.5">
-              <View className="bg-darkblue h-2.5 rounded-full" style={{ width: "45%" }}></View>
-            </View>
-          </View>
+        <View className="flex flex-col w-full mt-3">
+          <FlatList
+            data={data}
+            renderItem={({ item }) => (
+              <View className="my-1">
+                <CourseProgressCard category={item.category} title={item.title} progress={item.progress} />
+              </View>
+            )}
+            keyExtractor={item => item.id}
+            ItemSeparatorComponent={() => (
+              <View
+                style={{
+                  height: 1,
+                  marginVertical: 8,
+                }}
+              />
+            )}
+          />
         </View>
       </View>
     </Background>
