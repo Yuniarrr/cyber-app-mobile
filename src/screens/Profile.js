@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import Background from "../components/Background";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import GreenFlagSVG from '../../assets/green-flag.svg';
@@ -10,6 +10,7 @@ import GraphSVG from '../../assets/graph.svg';
 import CountWithIconBox from "../components/Box/CountWithIconBox";
 import InfoWithIconBox from "../components/Box/InfoWithIconBox";
 import CourseProgressCard from "../components/Card/CourseProgressCard";
+import { useNavigation } from "@react-navigation/native";
 
 const data = [
   {
@@ -26,7 +27,9 @@ const data = [
   },
 ]
 
-export default function Profile({ navigation }) {
+export default function Profile() {
+  const navigation = useNavigation();
+
   return (
     <Background>
       <View className="flex flex-col items-start justify-start mx-2 gap-y-6">
@@ -51,11 +54,13 @@ export default function Profile({ navigation }) {
                 </Text>
               </View>
             </View>
-            <Ionicons
-              name="settings-outline"
-              size={25}
-              color="#9CA3AF"
-            />
+            <TouchableOpacity onPress={() => navigation.navigate('settings')}>
+              <Ionicons
+                name="settings-outline"
+                size={25}
+                color="#9CA3AF"
+              />
+            </TouchableOpacity>
           </View>
         </View>
 

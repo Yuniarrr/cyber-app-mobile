@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigator from "./TabNavigator";
 import Search from "../screens/Search";
+import Settings from "../screens/Settings";
 
 const RootStack = createNativeStackNavigator();
 
@@ -17,6 +18,10 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="search"
                     component={Search}
+                />
+                <RootStack.Screen
+                    name="settings"
+                    component={Settings}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
