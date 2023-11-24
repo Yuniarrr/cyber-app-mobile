@@ -7,7 +7,7 @@ export default function Profile({ navigation }) {
   return (
     <Background>
       <View className="flex flex-col items-start justify-start">
-        <Text>Profile</Text>
+        <Text className="w-full text-center">Profile</Text>
       </View>
     </Background>
   );
