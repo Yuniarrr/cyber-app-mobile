@@ -79,10 +79,10 @@ export default function DetailCourse() {
                                 horizontal
                                 data={data}
                                 renderItem={({ item }) => (
-                                    <View className="flex flex-col items-center justify-center w-32 py-3 rounded-md shadow-sm shadow-[#e0dddd]">
+                                    <TouchableOpacity className="flex flex-col items-center justify-center w-32 py-3 rounded-md shadow-sm shadow-[#e0dddd]" onPress={() => navigation.navigate('detail-topic')}>
                                         <Topic1 />
                                         <Text className="mx-1 font-medium text-center">{item.topic}</Text>
-                                    </View>
+                                    </TouchableOpacity>
                                 )}
                                 keyExtractor={item => item.id}
                                 ItemSeparatorComponent={() => (

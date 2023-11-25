@@ -3,6 +3,7 @@ import TabNavigator from "./TabNavigator";
 import Search from "../screens/Search";
 import Settings from "../screens/Settings";
 import DetailCourse from "../screens/course/DetailCourse";
+import DetailTopic from "../screens/course/DetailTopic";
 
 const RootStack = createNativeStackNavigator();
 
@@ -29,6 +30,10 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="detail-course"
                     component={DetailCourse}
+                />
+                <RootStack.Screen
+                    name="detail-topic"
+                    component={DetailTopic}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
