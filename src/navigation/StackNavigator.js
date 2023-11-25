@@ -9,6 +9,7 @@ import OnBoarding1 from "../screens/started/OnBoarding1";
 import OnBoarding2 from "../screens/started/OnBoarding2";
 import GetStarted from "../screens/started/GetStarted";
 import Login from "../screens/auth/Login";
+import Register from "../screens/auth/Register";
 
 const RootStack = createNativeStackNavigator();
 
@@ -63,6 +64,10 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="login"
                     component={Login}
+                />
+                <RootStack.Screen
+                    name="register"
+                    component={Register}
                 />
             </RootStack.Group>
         </RootStack.Navigator>

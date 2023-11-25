@@ -30,7 +30,7 @@ export default function GetStarted() {
             </View>
             <View className="flex flex-row items-center justify-center w-full">
                 <Text>Don't have an account? </Text>
-                <Text className="font-bold">Sign Up</Text>
+                <Text className="font-bold" onPress={() => navigation.navigate('register')}>Sign Up</Text>
             </View>
         </SafeAreaView>
     )
