@@ -10,7 +10,7 @@ module.exports = {
     },
     colors: {
       white: "#FFFFFF",
-      darkblue: "#1E2857",
+      "darkblue": "#1E2857",
       "gray-chateau": "#9CA3AF",
       "pale-sky": '#6B7280',
       "light-green": "#EAFCF2",
@@ -18,6 +18,11 @@ module.exports = {
       "light-yellow": "#FFFAEC",
       "yellow": "#FDC83D",
       "light-gray": "#F3F4F6",
+      red : "#FF445D",
+      "light-red" : "#FFCCCB",
+      "light-blue" : "#DFF2FF",
+      blue : "#6F9CDE"
+
     },
   },
   plugins: [

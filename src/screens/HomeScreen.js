@@ -4,13 +4,21 @@ import Background from '../components/Background';
 import ColoredHeader from '../components/ColoredHeader';
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
+// import { MaterialIcons } from '@expo/vector-icons';
+// import { Icon } from '@iconify/react';
+
+
+import HomeMenuCoursesBox from "../components/Box/HomeMenuCoursesBox";
+import HomeMenuArticleBox from "../components/Box/HomeMenuArticleBox";
+import HomeMenuTopicBox from '../components/Box/HomeMenuTopicBox';
 // import { ScrollView } from 'react-native-gesture-handler';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
 
   return (
-    <ColoredHeader>
+    // <ColoredHeader>
+    <Background>
     <ScrollView>
       {/* nama */}
       <View className=" justify-center pl-6">
@@ -52,34 +60,12 @@ export default function HomeScreen() {
       {/* tabel explor topic */}
       <View className="flex flex-col m-1">
         <View className="flex flex-row">
-          <View className="flex-1 m-2">
-            {/* nyoba doank */}
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-14 w-44" onPress={() => navigation.navigate('search')} > 
-            {/* <View className="flex flex-row">
-              <View className="mr-2 pb-3">
-                <Image source={require("../../assets/cybersec.png")} style={{ width: 35, height: 35 }} className="pb-3" />
-              </View> */}
-              <Text>Testing</Text>
-            {/* </View> */}
-            </TouchableOpacity>
-          </View>
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-14 w-44">
-              <Text>Yes</Text>
-            </TouchableOpacity>
-          </View>
+          <HomeMenuTopicBox buttonText="CyberSecurity"/>
+          <HomeMenuTopicBox buttonText="Networking"/>
         </View>
         <View className="flex flex-row">
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-14 w-44">
-              <Text>Testing</Text>
-            </TouchableOpacity>
-          </View>
-          <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-14 w-44">
-              <Text>Yes</Text>
-            </TouchableOpacity>
-          </View>
+          <HomeMenuTopicBox buttonText="OS&IT"/>
+          <HomeMenuTopicBox buttonText="Programming"/>
         </View>
       </View>
       <View className="flex-row items-center justify-between py-2 px-4">
@@ -91,17 +77,90 @@ export default function HomeScreen() {
       <ScrollView horizontal={true}>
         <View className="flex flex-row">
           <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-80 w-60 gap-x-1 ">
-            </TouchableOpacity>
+            <HomeMenuCoursesBox
+              imageSource={require('../../assets/Popular_Courses2.jpeg')}
+              category="Cybersecurity"
+              title="Introduction to Cyber Security: Cyber Security"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-light-green text-green"
+            />
           </View>
           <View className="flex-1 m-2">
-            <TouchableOpacity className="items-center p-4 rounded-lg bg-[#FFF] shadow-xl h-80 w-60 gap-x-1">
-            </TouchableOpacity>
+            <HomeMenuCoursesBox
+              imageSource={require('../../assets/Popular_Courses1.jpeg')}
+              category="Finance"
+              title="Master Digital Product Design: UX Research"
+              price={70.1}
+              rating={4.7}
+              totalReviews={1882}
+              backgroundColor="bg-light-red text-red"
+            />
+          </View>
+        </View>
+      </ScrollView>
+      <View className="flex-row items-center justify-between py-2 px-4">
+        <Text className="text-darkblue text-left font-inter text-base font-bold">Suggestion For You</Text>
+        <TouchableOpacity>
+          <Text className="text-gray font-normal text-sm">See More</Text>
+        </TouchableOpacity>
+      </View>
+      <ScrollView horizontal={true}>
+        <View className="flex flex-row">
+          <View className="flex-1 m-2">
+            <HomeMenuCoursesBox
+              imageSource={require('../../assets/Suggestion_1.jpeg')}
+              category="Finance"
+              title="The Complete Investment Banking Course 2023"
+              price={65.7}
+              rating={4.5}
+              totalReviews={1395}
+              backgroundColor="bg-light-red text-red"
+            />
+          </View>
+          <View className="flex-1 m-2">
+          <HomeMenuCoursesBox
+              imageSource={require('../../assets/Popular_Courses2.jpeg')}
+              category="Cybersecurity"
+              title="Introduction to Cyber Security: Cyber Security"
+              price={88.5}
+              rating={4.9}
+              totalReviews={2395}
+              backgroundColor="bg-light-green text-green"
+            />
+          </View>
+        </View>
+      </ScrollView>
+      <View className="flex-row items-center justify-between py-2 px-4">
+        <Text className="text-darkblue text-left font-inter text-base font-bold">Did You Know?</Text>
+        <TouchableOpacity>
+          <Text className="text-gray font-normal text-sm">See More</Text>
+        </TouchableOpacity>
+      </View>
+      <ScrollView horizontal={true}>
+        <View className="flex flex-row">
+          <View className="flex-1 m-2">
+          <HomeMenuArticleBox
+              imageSource={require('../../assets/Article1.jpeg')}
+              category="Web"
+              title="Guide to Integrate API in Back End Development"
+              backgroundColor="bg-light-yellow text-yellow"
+            />
+          </View>
+          <View className="flex-1 m-2">
+          <HomeMenuArticleBox
+              imageSource={require('../../assets/Article2.jpeg')}
+              category="Mobile"
+              title="Unleashing the Potential of Mobile Development"
+              backgroundColor="bg-light-blue text-blue"
+            />
           </View>
         </View>
       </ScrollView>
       </ScrollView>
-    </ColoredHeader>
+    </Background>
+    
   );
 
 }
