@@ -1,12 +1,14 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Feather from "@expo/vector-icons/Feather";
 import MiniLogoSVG from '../../../assets/mini-logo.svg'
+import { SafeAreaView } from "react-native-safe-area-context";
+import ColoredButton from "../Button/ColoredButton";
 
 export default function OnBoardingTemplate({ children, title, subTitle, onPress, next }) {
     return (
         <SafeAreaView className="flex-1 bg-white">
-            <View className="flex-col items-start justify-between flex-1 mx-5 my-8">
+            <View className="flex-col items-start justify-between flex-1 mx-5 my-5">
                 <View className="flex flex-row items-center justify-start gap-x-2">
                     <MiniLogoSVG />
                     <Text className="text-xl font-bold tracking-wider text-darkblue">CyberShield</Text>
@@ -30,9 +32,7 @@ export default function OnBoardingTemplate({ children, title, subTitle, onPress,
                                 color="white"
                             />
                         </View>
-                        <TouchableOpacity className="p-20 py-3 rounded-3xl bg-blue-gray" onPress={onPress}>
-                            <Text className="text-lg font-bold text-darkblue">Continue</Text>
-                        </TouchableOpacity>
+                        <ColoredButton title={"Continue"} onPress={onPress} buttonStyle={"p-20 py-3"} titleStyle={"text-darkblue text-lg"} />
                     </View>
                 </View>
             </View>
