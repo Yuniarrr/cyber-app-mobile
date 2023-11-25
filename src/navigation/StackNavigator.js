@@ -8,6 +8,7 @@ import Splash from "../screens/started/Splash";
 import OnBoarding1 from "../screens/started/OnBoarding1";
 import OnBoarding2 from "../screens/started/OnBoarding2";
 import GetStarted from "../screens/started/GetStarted";
+import Login from "../screens/auth/Login";
 
 const RootStack = createNativeStackNavigator();
 
@@ -56,6 +57,12 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="get-started"
                     component={GetStarted}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="login"
+                    component={Login}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
