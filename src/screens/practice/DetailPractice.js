@@ -29,7 +29,7 @@ const data = [
   },
 ];
 
-export default function DetailCourse() {
+export default function DetailPractice() {
   const navigation = useNavigation();
 
   return (
@@ -98,8 +98,9 @@ export default function DetailCourse() {
                 data={data}
                 renderItem={({ item }) => (
                   <TouchableOpacity
-                    className="flex flex-col items-center justify-center w-32 py-3 rounded-md shadow-sm shadow-[#e0dddd]"
-                    onPress={() => navigation.navigate("detail-topic")}>
+                    className="flex flex-col items-center justify-center w-32 py-3 rounded-md "
+                    
+                    >
                     <Topic1 />
                     <Text className="mx-1 font-medium text-center">
                       {item.topic}
@@ -138,7 +139,7 @@ export default function DetailCourse() {
                 horizontal
                 data={data}
                 renderItem={({ item }) => (
-                  <View className="flex flex-col items-center justify-center w-32 py-3 rounded-md shadow-sm shadow-[#e0dddd]">
+                  <View className="flex flex-col items-center justify-center w-32 py-3 rounded-md ">
                     <Topic1 />
                     <Text className="mx-1 font-medium text-center">
                       {item.topic}

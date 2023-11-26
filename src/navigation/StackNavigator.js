@@ -10,6 +10,11 @@ import OnBoarding2 from "../screens/started/OnBoarding2";
 import GetStarted from "../screens/started/GetStarted";
 import Login from "../screens/auth/Login";
 import Register from "../screens/auth/Register";
+import PreQuiz from "../screens/practice/PreQuiz";
+import DetailPractice from "../screens/practice/DetailPractice";
+import Quiz1 from "../screens/practice/Quiz1";
+import Quiz2 from "../screens/practice/Quiz2";
+import Result from "../screens/practice/Result";
 
 const RootStack = createNativeStackNavigator();
 
@@ -68,6 +73,28 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="register"
                     component={Register}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="prequiz"
+                    component={PreQuiz}
+                />
+                <RootStack.Screen
+                    name="detail-practice"
+                    component={DetailPractice}
+                />
+                <RootStack.Screen
+                    name="quiz-1"
+                    component={Quiz1}
+                />
+                <RootStack.Screen
+                    name="quiz-2"
+                    component={Quiz2}
+                />
+                <RootStack.Screen
+                    name="result"
+                    component={Result}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
