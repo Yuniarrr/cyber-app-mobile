@@ -1,6 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigator from "./TabNavigator";
 import Search from "../screens/Search";
+import SeeMorePopularCourses from "../screens/SeeMorePopularCourses";
+import SeeMoreSuggestion from "../screens/SeeMoreSuggestion";
+import SeeMoreDidYouKnow from "../screens/SeeMoreDidYouKnow";
 
 const RootStack = createNativeStackNavigator();
 
@@ -17,6 +20,24 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="search"
                     component={Search}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemorepopularcourses"
+                    component={SeeMorePopularCourses}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemoresuggestion"
+                    component={SeeMoreSuggestion}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemoredidyouknow"
+                    component={SeeMoreDidYouKnow}
                 />
             </RootStack.Group>
         </RootStack.Navigator>

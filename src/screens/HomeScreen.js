@@ -53,9 +53,6 @@ export default function HomeScreen() {
       {/* explore topic */}
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-darkblue text-left font-inter text-base font-bold">Explore Topic</Text>
-        <TouchableOpacity>
-          <Text className="text-gray font-normal text-sm">See More</Text>
-        </TouchableOpacity>
       </View>
       {/* tabel explor topic */}
       <View className="flex flex-col m-1">
@@ -71,7 +68,7 @@ export default function HomeScreen() {
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-darkblue text-left font-inter text-base font-bold">Popular Courses</Text>
         <TouchableOpacity>
-          <Text className="text-gray font-normal text-sm">See More</Text>
+          <Text className="text-gray font-normal text-sm" onPress={() => navigation.navigate('seemorepopularcourses')}>See More</Text>
         </TouchableOpacity>
       </View>
       <ScrollView horizontal={true}>
@@ -103,7 +100,7 @@ export default function HomeScreen() {
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-darkblue text-left font-inter text-base font-bold">Suggestion For You</Text>
         <TouchableOpacity>
-          <Text className="text-gray font-normal text-sm">See More</Text>
+          <Text className="text-gray font-normal text-sm" onPress={() => navigation.navigate('seemoresuggestion')}>See More</Text>
         </TouchableOpacity>
       </View>
       <ScrollView horizontal={true}>
@@ -135,7 +132,7 @@ export default function HomeScreen() {
       <View className="flex-row items-center justify-between py-2 px-4">
         <Text className="text-darkblue text-left font-inter text-base font-bold">Did You Know?</Text>
         <TouchableOpacity>
-          <Text className="text-gray font-normal text-sm">See More</Text>
+          <Text className="text-gray font-normal text-sm"  onPress={() => navigation.navigate('seemoredidyouknow')}>See More</Text>
         </TouchableOpacity>
       </View>
       <ScrollView horizontal={true}>
