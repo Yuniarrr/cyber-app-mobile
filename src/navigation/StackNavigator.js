@@ -10,6 +10,9 @@ import OnBoarding2 from "../screens/started/OnBoarding2";
 import GetStarted from "../screens/started/GetStarted";
 import Login from "../screens/auth/Login";
 import Register from "../screens/auth/Register";
+import SeeMorePopularCourses from "../screens/SeeMorePopularCourses";
+import SeeMoreSuggestion from "../screens/SeeMoreSuggestion";
+import SeeMoreDidYouKnow from "../screens/SeeMoreDidYouKnow";
 
 const RootStack = createNativeStackNavigator();
 
@@ -68,6 +71,24 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="register"
                     component={Register}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemorepopularcourses"
+                    component={SeeMorePopularCourses}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemoresuggestion"
+                    component={SeeMoreSuggestion}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="seemoredidyouknow"
+                    component={SeeMoreDidYouKnow}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
