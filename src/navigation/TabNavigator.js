@@ -7,13 +7,13 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "../screens/HomeScreen";
 import Course from "../screens/Course";
 import Profile from "../screens/Profile";
-import Wishlist from "../screens/Wishlist";
+import Practice from "../screens/Practice";
 
 
 // Screen names
 const homeName = "Home";
 const courseFitur = "Course";
-const wishlistFitur = "Wishlist";
+const practiceFitur = "Practice";
 const profileFitur = "Profile";
 
 const Tab = createBottomTabNavigator();
@@ -31,7 +31,7 @@ function MainContainer() {
             iconName = focused ? "home" : "home-outline";
           } else if (rn === courseFitur) {
             iconName = focused ? "book" : "book-outline";
-          } else if (rn === wishlistFitur) {
+          } else if (rn === practiceFitur) {
             iconName = focused ? "md-folder-open" : "md-folder-open-outline";
           } else if (rn === profileFitur) {
             iconName = focused ? "person" : "person-outline";
@@ -59,7 +59,7 @@ function MainContainer() {
     >
       <Tab.Screen name={homeName} component={HomeScreen} />
       <Tab.Screen name={courseFitur} component={Course} />
-      <Tab.Screen name={wishlistFitur} component={Wishlist} />
+      <Tab.Screen name={practiceFitur} component={Practice} />
       <Tab.Screen name={profileFitur} component={Profile} />
     </Tab.Navigator>
   );
