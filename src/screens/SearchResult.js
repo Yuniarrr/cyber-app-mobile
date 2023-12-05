@@ -43,7 +43,7 @@ export default function Search({ navigation }) {
           <Ionicons name="search-outline" size={22} color="#394169" />
           <TextInput 
             className="flex-1 ml-3 mb-1 text-[#394169] text-sm font-normal"
-            placeholder="What do you want to learn?"
+            placeholder="Network Types"
             placeholderTextColor="#394169"
             value={searchText}
             onChangeText={(text) => setSearchText(text)}
@@ -54,31 +54,6 @@ export default function Search({ navigation }) {
           </TouchableOpacity>
         </TouchableOpacity>
       </View>
-      <Text className=" ml-4 mt-2 text-left text-[#394169] text-lg font-bold">
-          Suggestions
-      </Text>
-      <View className="flex flex-row p-2 ml-2" >
-        <Ionicons name="search-outline" size={18} color="#111827" />
-        <Text className=" ml-2 text-left text-[#111827] text-sm font-normal" onPress={() => navigation.navigate('searchresult')}>
-          Network Types
-        </Text>
-      </View>
-      <View className="flex flex-row p-2 ml-2" >
-        <Ionicons name="search-outline" size={18} color="#111827" />
-        <Text className=" ml-2 text-left text-[#111827] text-sm font-normal">
-          Network Media
-        </Text>
-      </View>
-      <View className="flex flex-row p-2 ml-2" >
-        <Ionicons name="search-outline" size={18} color="#111827" />
-        <Text className=" ml-2 text-left text-[#111827] text-sm font-normal">
-          Network Testing Utilities
-        </Text>
-      </View>
-    
     </Background>
   );
 }
-
-
-

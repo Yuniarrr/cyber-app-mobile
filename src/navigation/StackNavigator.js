@@ -4,6 +4,7 @@ import Search from "../screens/Search";
 import SeeMorePopularCourses from "../screens/SeeMorePopularCourses";
 import SeeMoreSuggestion from "../screens/SeeMoreSuggestion";
 import SeeMoreDidYouKnow from "../screens/SeeMoreDidYouKnow";
+import SearchResult from "../screens/SearchResult";
 
 const RootStack = createNativeStackNavigator();
 
@@ -38,6 +39,12 @@ function StackNavigator() {
                 <RootStack.Screen
                     name="seemoredidyouknow"
                     component={SeeMoreDidYouKnow}
+                />
+            </RootStack.Group>
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="searchresult"
+                    component={SearchResult}
                 />
             </RootStack.Group>
         </RootStack.Navigator>
