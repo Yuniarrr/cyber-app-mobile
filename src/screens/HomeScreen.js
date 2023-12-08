@@ -62,7 +62,9 @@ export default function HomeScreen() {
         </View>
         <View className="flex flex-row">
           <HomeMenuTopicBox buttonText="OS&IT"/>
+          <TouchableOpacity onPress={() => navigation.navigate('program')}> 
           <HomeMenuTopicBox buttonText="Programming"/>
+          </TouchableOpacity>
         </View>
       </View>
       <View className="flex-row items-center justify-between py-2 px-4">
@@ -82,6 +84,7 @@ export default function HomeScreen() {
               rating={4.9}
               totalReviews={2395}
               backgroundColor="bg-light-green text-green"
+              onPress={() => navigation.navigate("soon")}
             />
           </View>
           <View className="flex-1 m-2">
@@ -93,6 +96,7 @@ export default function HomeScreen() {
               rating={4.7}
               totalReviews={1882}
               backgroundColor="bg-light-red text-red"
+              onPress={() => navigation.navigate("soon")}
             />
           </View>
         </View>
@@ -114,6 +118,7 @@ export default function HomeScreen() {
               rating={4.5}
               totalReviews={1395}
               backgroundColor="bg-light-red text-red"
+              onPress={() => navigation.navigate("soon")}
             />
           </View>
           <View className="flex-1 m-2">
@@ -125,6 +130,7 @@ export default function HomeScreen() {
               rating={4.9}
               totalReviews={2395}
               backgroundColor="bg-light-green text-green"
+              onPress={() => navigation.navigate("soon")}
             />
           </View>
         </View>
@@ -143,6 +149,7 @@ export default function HomeScreen() {
               category="Web"
               title="Guide to Integrate API in Back End Development"
               backgroundColor="bg-light-yellow text-yellow"
+              onPress={() => navigation.navigate("soon")}
             />
           </View>
           <View className="flex-1 m-2">
@@ -151,6 +158,7 @@ export default function HomeScreen() {
               category="Mobile"
               title="Unleashing the Potential of Mobile Development"
               backgroundColor="bg-light-blue text-blue"
+              onPress={() => navigation.navigate("soon")}
             />
           </View>
         </View>

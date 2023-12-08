@@ -18,6 +18,9 @@ import DetailPractice from "../screens/practice/DetailPractice";
 import Quiz1 from "../screens/practice/Quiz1";
 import Quiz2 from "../screens/practice/Quiz2";
 import Result from "../screens/practice/Result";
+import Programming from "../screens/Programming";
+import Comingsoon from "../screens/Comingsoon";
+
 
 const RootStack = createNativeStackNavigator();
 
@@ -116,6 +119,21 @@ function StackNavigator() {
                     component={Result}
                 />
             </RootStack.Group>
+
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="program"
+                    component={Programming}
+                />
+            </RootStack.Group>
+
+            <RootStack.Group screenOptions={{ headerShown: false }}>
+                <RootStack.Screen
+                    name="soon"
+                    component={Comingsoon}
+                />
+            </RootStack.Group>
+            
         </RootStack.Navigator>
     );
 }

@@ -68,7 +68,7 @@ export default function Practice() {
           </TouchableOpacity>
 
           {/* programming */}
-          <TouchableOpacity className="flex flex-row justify-around px-1 py-3 rounded-lg bg-darkblue">
+          <TouchableOpacity className="flex flex-row justify-around px-1 py-3 rounded-lg bg-darkblue"  onPress={() => navigation.navigate("program")}>
             <ProgrammingSVG />
             <View className="flex flex-col mt-2">
               <Text className="text-right text-white">10 chapters</Text>
