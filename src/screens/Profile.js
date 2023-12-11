@@ -33,7 +33,7 @@ export default function Profile() {
   return (
     <Background>
       <View className="flex flex-col items-start justify-start m-5 gap-y-6">
-        <Text className="w-full text-lg font-semibold text-center">Profile</Text>
+        <Text className="w-full pt-5 text-lg font-semibold text-center">Profile</Text>
 
         {/* username and settings */}
         <View className="mx-3">

@@ -17,7 +17,7 @@ export default function Practice() {
   return (
     <Background>
       <ScrollView className="flex flex-col m-5 gap-y-6" showsVerticalScrollIndicator={false}>
-        <Text className="w-full -mb-3 text-lg font-semibold text-center text-darkblue">Practice</Text>
+        <Text className="w-full pt-5 -mb-3 text-lg font-semibold text-center text-darkblue">Practice</Text>
 
         {/* course list */}
         <View className="flex flex-col w-full gap-y-3">
