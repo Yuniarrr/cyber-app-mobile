@@ -1,10 +1,13 @@
-import { View, Text } from "react-native";
+import { View, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 
 export default function Background({ children }) {
   return (
-    <View className="flex-1 items-center justify-center bg-[#F2E5E5]">
+    <SafeAreaView className="flex-1 bg-[#FFFFFF]">
+      {/* <View className="mx-3 my-5"> */}
       {children}
-    </View>
+      {/* </View> */}
+    </SafeAreaView>
   );
 }
